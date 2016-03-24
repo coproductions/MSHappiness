@@ -1,0 +1,10 @@
+{
+  "name": "MSHappiness",
+  "version": "0.0.0",
+  "description": "MSHappiness",
+  "main": "server.js",
+  "author": {
+    "name": "v-codumb",
+    "email": ""
+  }
+}
