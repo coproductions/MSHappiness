@@ -1,8 +1,10 @@
 ﻿console.log('hello from index.js');
+
+//click event example that triggers an ajax call
 $(".helloButton").click(function () {
     console.log('clicked');
     
-    
+   //ajax example, very basic 
     $.ajax({
         url: "http://localhost:1337/test1",
 
