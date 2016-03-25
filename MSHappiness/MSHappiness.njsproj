@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="dummyData.js" />
+    <Compile Include="public\index.js" />
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="public\index.html" />
