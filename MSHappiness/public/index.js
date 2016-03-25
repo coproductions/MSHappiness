@@ -4,19 +4,19 @@
 $(".helloButton").click(function () {
     console.log('clicked');
     
-   //ajax example, very basic 
+    //ajax example, very basic 
     $.ajax({
         method: "GET",
         url: "http://localhost:1337/test1",
 
-    }).done(function (data){
+    }).done(function (data) {
         console.log('data', data);
         $('.hello').html(data[0].building);
     })
 });
 
 
-//example of a post reques
+//example of a post request after a button click
 $(".postTest").click(function (){
     var postObj = { "text": $(".testInput").val() };
     console.log('postobj' , postObj);
