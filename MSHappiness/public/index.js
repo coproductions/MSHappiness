@@ -27,5 +27,6 @@ $(".postTest").click(function (){
         data: postObj
     }).done(function (msg) {
         console.log("data saved: ", msg);
+        $(".testInput").val("")
     });
 })
