@@ -8,6 +8,8 @@ var dummyData = require('./dummyData.js');
 
 //designating public folder contents to be served up to the client
 app.use(express.static(__dirname + '/public'));
+
+//this allows js objects with key value pairs to be passed as the body in post requests
 app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.json());
 
