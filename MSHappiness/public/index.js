@@ -48,7 +48,7 @@ $(".showVideo").click(function () {
 });
 
 var getIframe = function (data) {
-    var rnd = Math.floor(Math.random() * 10);
+    var rnd = Math.floor(Math.random() * 25);
     var h = data.data.children[rnd].data.media.oembed.height;
     var w = data.data.children[rnd].data.media.oembed.width;
     var url = data.data.children[rnd].data.media.oembed.url;
