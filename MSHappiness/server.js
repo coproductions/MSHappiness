@@ -24,6 +24,23 @@ app.get('/test1', function (req, res) {
     res.send(dummyData.people);
 });
 
+app.post('/building', function (req, res) {
+    // building number will be available under req.body console.log to check how that looks
+    res.send('gotit');
+});
+
+app.post('/question:id', function (req, res) {
+    //id will be available as a string under req.params.id, so to make it a number just Number(req.params.id)
+    console.log(req.params.id);
+    //here we need to send this to the db and get back some info for now I am only making something up
+    var dummyData = {
+        "happy": 5,
+        "unhappy": 3,
+        "neutral": 2
+    };
+    res.send(dummyData);
+});
+
 // POST method route example, posts and logs that which the user puts into the input field
 app.post('/test2', function (req, res) {
     console.log(req.body.text);
