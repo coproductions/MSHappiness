@@ -26,12 +26,14 @@ app.get('/test1', function (req, res) {
 
 app.post('/building', function (req, res) {
     // building number will be available under req.body console.log to check how that looks
+    console.log(req.body);
     res.send('gotit');
 });
 
 app.post('/question:id', function (req, res) {
     //id will be available as a string under req.params.id, so to make it a number just Number(req.params.id)
     console.log(req.params.id);
+    console.log(req.body);
     //here we need to send this to the db and get back some info for now I am only making something up
     var dummyData = {
         "happy": 5,

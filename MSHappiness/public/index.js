@@ -31,6 +31,37 @@ $(".postTest").click(function () {
     });
 });
 
+
+$(".postBuildingNumber").click(function () {
+    var postObj = { "building": $(".building").val() };
+    console.log('postobj' , postObj);
+    $.ajax({
+        method: "POST",
+        //dataType : "html",
+        url: "http://localhost:1337/building",
+        data: postObj
+    }).done(function (msg) {
+         console.log("client data saved: ", msg);
+        $(".building").val("")
+    });
+});
+
+$(".postQuestionInfo").click(function () {
+    var postObj = { "status": $(".status").val(), "comments": $(".comments").val() };
+    console.log('postobj' , postObj);
+    var questionId = 1;
+    $.ajax({
+        method: "POST",
+        //dataType : "html",
+        url: "http://localhost:1337/question"+questionId,
+        data: postObj
+    }).done(function (msg) {
+        console.log("client data saved: ", msg);
+        //$(".building").val("")
+    });
+});
+
+
 //click event example that triggers an ajax call to get a random reddit video
 $(".showVideo").click(function () {
     
