@@ -31,6 +31,18 @@ $(".postTest").click(function () {
     });
 });
 
+$(".getId").click(function () {
+    var postObj = { result:"happy" };
+    $.ajax({
+        method: "POST",
+        //dataType : "html",
+        url: "http://localhost:1337/question123",
+        data: postObj
+    }).done(function (msg) {
+        // console.log("data saved: ", msg);
+    });
+});
+
 //click event example that triggers an ajax call to get a random reddit video
 $(".showVideo").click(function () {
     
@@ -59,3 +71,4 @@ var getIframe = function (data) {
     }
     return '<iframe width="' + w + '" height="' + h + '"src="' + url + '"></iframe>';;
 };
+
