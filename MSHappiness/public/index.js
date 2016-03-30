@@ -47,6 +47,7 @@ $(".showVideo").click(function () {
     })
 });
 
+//a function that returns a random video in an iframe from a reddit API
 var getIframe = function (data) {
     var rnd = Math.floor(Math.random() * 25);
     var h = data.data.children[rnd].data.media.oembed.height;
