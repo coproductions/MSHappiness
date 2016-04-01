@@ -18,6 +18,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+//app.get('/layout', function (req, res) {
+//    res.sendFile(__dirname + '/public/layout.html');
+//});
+
 
 // GET method route example
 app.get('/test1', function (req, res) {
