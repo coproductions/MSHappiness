@@ -7,6 +7,22 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MSHappiness", "MSHappiness\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76E2B26B-BD19-461C-944E-88B44FEA8285}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Theme", "Theme", "{B997075F-ADBA-4FAA-86D9-29F533D48EFB}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\animate.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\animate.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\bootstrap\css\bootstrap.min.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\bootstrap\css\bootstrap.min.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\custom.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\custom.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\theme-skins\dark.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\theme-skins\dark.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\theme-colors\default.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\theme-colors\default.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\font-awesome\css\font-awesome.min.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\font-awesome\css\font-awesome.min.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\footers\footer-v1.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\footers\footer-v1.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\headers\header-default.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\headers\header-default.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\line-icons\line-icons.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\plugins\line-icons\line-icons.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\shortcode_accordion_and_tabs.html = ..\..\..\Desktop\Unifyv1.9.1\HTML\shortcode_accordion_and_tabs.html
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\plugins\style-switcher.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\plugins\style-switcher.css
+		..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\style.css = ..\..\..\Desktop\Unifyv1.9.1\HTML\assets\css\style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
