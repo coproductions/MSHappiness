@@ -2,7 +2,7 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html ng-app='HappinessMeter'>
 <!--<![endif]-->
 <head>
     <title>Accordion &amp; Tabs | Unify - Responsive Website Template</title>
@@ -41,6 +41,8 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="./css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+          <script src="indexAngular.js"></script>
 
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
@@ -94,7 +96,7 @@
         .marT50 {
             margin-top: 35px !important;
         }
-    
+
         .downArrow {
             display: block;
             opacity: .7;
@@ -124,11 +126,12 @@
 <body>
 
 
-    <div class="wrapper">
+    <div ng-controller='HappinessController' class="wrapper">
         <!--=== Header ===-->
         <div class="header">
             <div class="container">
                 <!-- Logo -->
+
                 <a class="logo" href="index.html">
                     <img src="https://assets.onestore.ms/cdnfiles/onestorerolling-1603-16000/shell/v3/images/logo/microsoft.png" alt="Microsoft" style="width: 20%">
                 </a>
@@ -319,17 +322,17 @@
                                         <div class="panel-body">
                                             <!-- Pie Charts v1 -->
                                             <div class="row pie-progress-charts margin-bottom-60">
-                                                <div class="inner-pchart col-md-4">
-                                                    <div class="circle" id="circle-1"></div>
+                                                <div class="inner-pchart col-md-4" ng-click="test('circle-1',$event)">
+                                                    <div class="circle" id="circle-1" ></div>
                                                     <h3 class="circle-title">Heck ya!</h3>
                                                     <p>comments</p>
                                                 </div>
-                                                <div class="inner-pchart col-md-4">
+                                                <div class="inner-pchart col-md-4" ng-click="test('circle-2',$event)">
                                                     <div class="circle" id="circle-2"></div>
                                                     <h3 class="circle-title">Whatevs</h3>
                                                     <p>comments</p>
                                                 </div>
-                                                <div class="inner-pchart col-md-4">
+                                                <div class="inner-pchart col-md-4" ng-click="test($event)">
                                                     <div class="circle" id="circle-3"></div>
                                                     <h3 class="circle-title">Nope.</h3>
                                                     <p>comments</p>
