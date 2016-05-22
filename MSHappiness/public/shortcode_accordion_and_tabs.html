@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./css/app.css" />
     <link rel="stylesheet" href="./css/blocks.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/sky-forms.css" />
 
     <!-- CSS Theme -->
     <link rel="stylesheet" href="./css/theme-colors/default.css" id="style_color">
@@ -68,6 +69,22 @@
             font-size: 14px;
         }
 
+        .btn-Next {
+            border-color: #555;
+            color: #555;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 0;
+            padding: 10px 28px;
+            text-transform: uppercase;
+            -webkit-transition: all .3s;
+            position: relative;
+            background-color: transparent;
+            z-index: 20;
+            display: inline-block;
+            font-size: 14px;
+        }
+
         a.btn-bdr:hover {
             color: white;
             font-weight: 600;
@@ -77,14 +94,27 @@
         .marT50 {
             margin-top: 35px !important;
         }
-
-        .btn-bdr {
-            display: inline-block;
-        }
-
+    
         .downArrow {
             display: block;
             opacity: .7;
+        }
+
+        .btn {
+            font-size: 30px;
+        }
+
+        .questionCols {
+            width: 45.8%;
+        }
+
+        h3{
+            font-weight: bold;
+        }
+
+        #nextbtn{
+            color: #555;
+            font-size: 20px;
         }
     </style>
 
@@ -198,7 +228,7 @@
                 <div class="animated fadeInUp wow" data-wow-duration="1.2s" data-wow-delay="2s">
 
                     <span class="page-scroll">
-                        <a class="btn-bdr move marT50" href="#surveySection">START</a>
+                        <a class="btn-bdr move marT50" href="#surveyFirst">START</a>
                     </span>
 
                     <span class="downArrow"><img alt="down arrow" src="./imgs/down-arrow.png"></span>
@@ -206,6 +236,47 @@
                 </div>
             </div>
         </div>
+
+        <div id="surveyFirst" class="bg-color-light promo-bg-fixed content-xlg parallaxBg height-500">
+            <div class="container text-center" data-start="opacity: 1;" data-320="opacity: 0;">
+                <!--<div class="margin-bottom-20">
+                    <a class="promo-video-icon-wrap color-dark rounded-x animated fadeInUp wow cbp-lightbox" data-wow-duration="2s" data-wow-delay=".5s" data-title="Video Presentation" href="https://player.vimeo.com/video/58363288?&rel=0&autoplay=1">
+                        <i class="promo-video-icon icon-control-play"></i>
+                    </a>
+                    <div id="cbp-lightbox" class="dp-none"></div>
+                </div>-->
+                <!--<span class="promo-text-v1 color-light margin-bottom-10 animated fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1s">
+                    Welcome to the
+                </span>
+                <h2 class="promo-text-v2 color-light animated fadeInUp wow margin-bottom-20" data-wow-duration="1.5s" data-wow-delay="1.5s">Happiness Meter</h2>-->
+                <div class="animated fadeInUp wow" data-wow-duration="1.2s" data-wow-delay="2s">
+                    <form action="#" class="sky-form">
+                        <fieldset>
+                            <section>
+                                <h3>Which building do you work in?</h3>
+                                <label id="bldgDrop" class="select">
+                                    <select>
+                                        <option value="0">Select</option>
+                                        <option value="1">25</option>
+                                        <option value="2">26</option>
+                                        <option value="3">27</option>
+                                        <option value="4">29</option>
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </section>
+                        </fieldset>
+                    </form>
+
+                    <span class="page-scroll">
+                        <a class="btn-Next nextbtn move marT50" href="#surveySection">NEXT</a>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+
+
 
         <!--=== Content Part ===-->
         <div id="surveySection" class="container content">
@@ -220,282 +291,300 @@
 
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One">
                                     <div class="section group">
-                                        <div class="col questionCols">
+                                        <div class="col-md-8">
                                             <h3>Are you satisfied with the beverage options in your building?</h3>
                                         </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-smile-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-meh-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-frown-o"></i>
+                                        <!--<div class="col iconCols">-->
+                                        <div class="col-md-4" style="text-align: center">
+                                            <button type="submit" class="btn btn-success">
+                                                <i class="fa fa-smile-o"></i>
+                                            </button>
+                                            <!--</div>-->
+                                            <button type="submit" class="btn btn-success">
+                                                <i class="fa fa-meh-o"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-success">
+                                                <i class="fa fa-frown-o"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                </a>
-
                             </div>
-                            <div id="collapse-One" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="panel-body">
-                                                DATA
+                            </a>
+
+                        </div>
+                        <div id="collapse-One" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="panel-body">
+                                            <!-- Pie Charts v1 -->
+                                            <div class="row pie-progress-charts margin-bottom-60">
+                                                <div class="inner-pchart col-md-4">
+                                                    <div class="circle" id="circle-1"></div>
+                                                    <h3 class="circle-title">Heck ya!</h3>
+                                                    <p>comments</p>
+                                                </div>
+                                                <div class="inner-pchart col-md-4">
+                                                    <div class="circle" id="circle-2"></div>
+                                                    <h3 class="circle-title">Whatevs</h3>
+                                                    <p>comments</p>
+                                                </div>
+                                                <div class="inner-pchart col-md-4">
+                                                    <div class="circle" id="circle-3"></div>
+                                                    <h3 class="circle-title">Nope.</h3>
+                                                    <p>comments</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="panel-body">
-                                                DATA
-                                            </div>
+                                            <!-- End Pie Charts v1 -->
                                         </div>
                                     </div>
+                                    <!--<div class="col-md-8">
+                                        <div class="panel-body">
+                                            DATA
+                                        </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Two">
-
-                                    <div class="section group">
-                                        <div class="col questionCols">
-                                            <h3>Do you think your cafe is in need of healthier food options?</h3>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-smile-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-meh-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-frown-o"></i>
-                                        </div>
-                                    </div>
-
-                                </a>
-
-                            </div>
-                            <div id="collapse-Two" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="panel-body">
-                                                DATA
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="panel-body">
-                                                DATA
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Four">
-                                    <div class="section group">
-                                        <div class="col questionCols">
-                                            <h3>Do you think your open office space improves your work day?</h3>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-smile-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-meh-o"></i>
-                                        </div>
-                                        <div class="col iconCols">
-                                            <i class="fa fa-frown-o"></i>
-                                        </div>
-                                    </div>
-
-                                </a>
-
-                            </div>
-                            <div id="collapse-Four" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    DATA
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--<div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Three">
-                                        Collapsible Group Item #3
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Three" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Food truck quinoa nesciunt laborum eiusmodolf moon tempor, sunt aliqua put a bird. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>-->
-
-
-
                     </div>
-                    <!-- End Accordion v1 -->
 
-                    <div class="margin-bottom-60"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
 
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Two">
+
+                                <div class="section group">
+                                    <div class="col questionCols">
+                                        <h3>Do you think your cafe is in need of healthier food options?</h3>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-meh-o"></i>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-frown-o"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                        </div>
+                        <div id="collapse-Two" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="panel-body">
+                                            DATA
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="panel-body">
+                                            DATA
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Four">
+                                <div class="section group">
+                                    <div class="col questionCols">
+                                        <h3>Do you think your open office space improves your work day?</h3>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-meh-o"></i>
+                                    </div>
+                                    <div class="col iconCols">
+                                        <i class="fa fa-frown-o"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                        </div>
+                        <div id="collapse-Four" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                DATA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Three">
+                                    Collapsible Group Item #3
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-Three" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Food truck quinoa nesciunt laborum eiusmodolf moon tempor, sunt aliqua put a bird. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>-->
 
                 </div>
-                <!-- End Content -->
+                <!-- End Accordion v1 -->
+
+                <div class="margin-bottom-60"></div>
+
+
             </div>
-        </div><!--/container-->
-        <!--=== End Content Part ===-->
-        <!--=== Footer Version 1 ===-->
-        <div class="footer-v1">
-            <div class="footer">
-                <div class="container">
-                    <div class="row">
-                        <!-- About -->
-                        <div class="col-md-3 md-margin-bottom-40">
-                            <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
-                            <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-                            <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
-                        </div><!--/col-md-3-->
-                        <!-- End About -->
-                        <!-- Latest -->
-                        <div class="col-md-3 md-margin-bottom-40">
-                            <div class="posts">
-                                <div class="headline">
-                                    <h2>Latest Posts</h2>
-                                </div>
-                                <ul class="list-unstyled latest-list">
-                                    <li>
-                                        <a href="#">Incredible content</a>
-                                        <small>May 8, 2014</small>
-                                    </li>
-                                    <li>
-                                        <a href="#">Best shoots</a>
-                                        <small>June 23, 2014</small>
-                                    </li>
-                                    <li>
-                                        <a href="#">New Terms and Conditions</a>
-                                        <small>September 15, 2014</small>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!--/col-md-3-->
-                        <!-- End Latest -->
-                        <!-- Link List -->
-                        <div class="col-md-3 md-margin-bottom-40">
-                            <div class="headline">
-                                <h2>Useful Links</h2>
-                            </div>
-                            <ul class="list-unstyled link-list">
-                                <li>
-                                    <a href="#">About us</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                                <li>
-                                    <a href="#">Portfolio</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                                <li>
-                                    <a href="#">Latest jobs</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                                <li>
-                                    <a href="#">Community</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                                <li>
-                                    <a href="#">Contact us</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                            </ul>
-                        </div><!--/col-md-3-->
-                        <!-- End Link List -->
-                        <!-- Address -->
-                        <div class="col-md-3 map-img md-margin-bottom-40">
-                            <div class="headline">
-                                <h2>Contact Us</h2>
-                            </div>
-                            <address class="md-margin-bottom-40">
-                                25, Lorem Lis Street, Orange <br />
-                                California, US <br />
-                                Phone: 800 123 3456 <br />
-                                Fax: 800 123 3456 <br />
-                                Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
-                            </address>
-                        </div><!--/col-md-3-->
-                        <!-- End Address -->
-                    </div>
-                </div>
-            </div><!--/footer-->
-
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>
-                                2015 &copy; All Rights Reserved.
-                                <a href="#">Privacy Policy</a> |
-                                <a href="#">Terms of Service</a>
-                            </p>
-                        </div>
-
-                        <!-- Social Links -->
-                        <div class="col-md-6">
-                            <ul class="footer-socials list-inline">
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
-                                        <i class="fa fa-skype"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
-                                        <i class="fa fa-pinterest"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End Social Links -->
-                    </div>
-                </div>
-            </div><!--/copyright-->
+            <!-- End Content -->
         </div>
-        <!--=== End Footer Version 1 ===-->
-    </div><!--/End Wrapepr-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
+                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
+                        <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
+                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline">
+                                <h2>Latest Posts</h2>
+                            </div>
+                            <ul class="list-unstyled latest-list">
+                                <li>
+                                    <a href="#">Incredible content</a>
+                                    <small>May 8, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">Best shoots</a>
+                                    <small>June 23, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">New Terms and Conditions</a>
+                                    <small>September 15, 2014</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline">
+                            <h2>Useful Links</h2>
+                        </div>
+                        <ul class="list-unstyled link-list">
+                            <li>
+                                <a href="#">About us</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="#">Latest jobs</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="#">Community</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                        </ul>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline">
+                            <h2>Contact Us</h2>
+                        </div>
+                        <address class="md-margin-bottom-40">
+                            25, Lorem Lis Street, Orange <br />
+                            California, US <br />
+                            Phone: 800 123 3456 <br />
+                            Fax: 800 123 3456 <br />
+                            Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
+                </div>
+            </div>
+        </div><!--/footer-->
 
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/jquery.easing.js"></script>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            2015 &copy; All Rights Reserved.
+                            <a href="#">Privacy Policy</a> |
+                            <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-md-6">
+                        <ul class="footer-socials list-inline">
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!--=== End Footer Version 1 ===-->
+    </div><!--/End Wrapepr-->
     <!-- JS Global Compulsory -->
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/jquery-migrate.min.js"></script>
@@ -511,6 +600,8 @@
     <script type="text/javascript" src="./js/style-switcher.js"></script>
 
     <!-- EXTRAS -->
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/jquery.easing.js"></script>
     <script src="./js/owl.carousel.js"></script>
     <script src="./js/fancy-box.js"></script>
     <script src="./js/jquery.fancybox.pack.js"></script>
@@ -521,6 +612,8 @@
     <script src="./js/backstretch-ini.js"></script>
     <script src="./js/jquery.parallax.js"></script>
 
+    <script src="./js/circles.js"></script>
+    <script src="./js/circles-master.js"></script>
 
 
     <script type="text/javascript">
@@ -528,6 +621,8 @@
             App.init();
             new WOW().init();
             StyleSwitcher.initStyleSwitcher();
+            CirclesMaster.initCirclesMaster1();
+            CirclesMaster.initCirclesMaster2();
         });
 
         var $offset = 0;

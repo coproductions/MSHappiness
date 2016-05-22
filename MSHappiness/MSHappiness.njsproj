@@ -36,6 +36,8 @@
     <Compile Include="public\js\backstretch-ini.js" />
     <Compile Include="public\js\bootstrap.js" />
     <Compile Include="public\js\bootstrap.min.js" />
+    <Compile Include="public\js\circles-master.js" />
+    <Compile Include="public\js\circles.js" />
     <Compile Include="public\js\custom.js" />
     <Compile Include="public\js\fancy-box.js" />
     <Compile Include="public\js\jquery-migrate.min.js" />
@@ -58,6 +60,7 @@
     <Compile Include="public\js\wow.min.js" />
     <Compile Include="server.js" />
     <Content Include="one_page_home1.html" />
+    <Content Include="public\css\sky-forms.css" />
     <Content Include="public\imgs\down-arrow.png" />
     <Content Include="public\css\animate.css" />
     <Content Include="public\css\blocks.css" />
