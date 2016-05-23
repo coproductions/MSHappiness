@@ -229,7 +229,7 @@
                 <div class="col-md-12">
                     <!-- Accordion v1 -->
                     <div class="panel-group acc-v1" id="accordion-1">
-                        <div class="panel panel-default">
+                        <!--<div class="panel panel-default">-->
                             <div class="panel-heading">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One">
                                     <div class="section group">
@@ -240,7 +240,7 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        <!--</div>-->
                         <div id="collapse-One" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <div class="row">
@@ -248,21 +248,21 @@
                                         <div class="panel-body">
                                             <!-- Pie Charts v1 -->
                                             <div class="row pie-progress-charts margin-bottom-60">
-                                                <div class="inner-pchart col-md-4">
-                                                    <a id="positiveBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default" ng-click="test('circle-1',$event)">
+                                                <div class="inner-pchart col-md-4" ng-click="test('circle-1',$event)">
+                                                    <a id="positiveBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
                                                         <i class="fa fa-smile-o"></i>
                                                     </a>
                                                     <div class="circle" id="circle-1">
                                                     </div>
                                                 </div>
-                                                <div class="inner-pchart col-md-4">
-                                                    <a id="neutralBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default" ng-click="test('circle-2',$event)">
+                                                <div class="inner-pchart col-md-4" ng-click="test('circle-2',$event)">
+                                                    <a id="neutralBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
                                                         <i class="fa fa-meh-o"></i>
                                                     </a>
                                                     <div class="circle" id="circle-2"></div>
                                                 </div>
-                                                <div class="inner-pchart col-md-4">
-                                                    <a id="negativeBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default" ng-click="test('circle-3',$event)">
+                                                <div class="inner-pchart col-md-4" ng-click="test('circle-3',$event)">
+                                                    <a id="negativeBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
                                                         <i class="fa fa-frown-o"></i>
                                                     </a>
                                                     <div class="circle" id="circle-3"></div>
@@ -319,60 +319,57 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="panel-group acc-v1" id="accordion-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-Four">
-                        <div class="section group">
-                            <div class="col-md-12" style="text-align:center">
-                                <h3>Do you think your open office space improves your work day</h3>
-                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div id="collapse-Four" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <!-- Pie Charts v1 -->
-                        <div class="row pie-progress-charts margin-bottom-60">
-                            <div class="inner-pchart col-md-4">
-                                <a id="positiveBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-1',$event)">
-                                    <i class="fa fa-smile-o"></i>
-                                </a>
-                                <div class="circle" id="circle-1">
+            <div class="panel-group acc-v1" id="accordion-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-Four">
+                            <div class="section group">
+                                <div class="col-md-12" style="text-align:center">
+                                    <h3>Do you think your open office space improves your work day</h3>
+                                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div class="inner-pchart col-md-4">
-                                <a id="neutralBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-2',$event)">
-                                    <i class="fa fa-meh-o"></i>
-                                </a>
-                                <div class="circle" id="circle-2"></div>
+                        </a>
+                    </div>
+                    <div id="collapse-Four" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <!-- Pie Charts v1 -->
+                            <div class="row pie-progress-charts margin-bottom-60">
+                                <div class="inner-pchart col-md-4">
+                                    <a id="positiveBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-1',$event)">
+                                        <i class="fa fa-smile-o"></i>
+                                    </a>
+                                    <div class="circle" id="circle-1">
+                                    </div>
+                                </div>
+                                <div class="inner-pchart col-md-4">
+                                    <a id="neutralBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-2',$event)">
+                                        <i class="fa fa-meh-o"></i>
+                                    </a>
+                                    <div class="circle" id="circle-2"></div>
+                                </div>
+                                <div class="inner-pchart col-md-4">
+                                    <a id="negativeBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-3',$event)">
+                                        <i class="fa fa-frown-o"></i>
+                                    </a>
+                                    <div class="circle" id="circle-3"></div>
+                                </div>
                             </div>
-                            <div class="inner-pchart col-md-4">
-                                <a id="negativeBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-3',$event)">
-                                    <i class="fa fa-frown-o"></i>
-                                </a>
-                                <div class="circle" id="circle-3"></div>
-                            </div>
+                            <!-- End Pie Charts v1 -->
                         </div>
-                        <!-- End Pie Charts v1 -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
+
+
     <!-- End Accordion v1 -->
 
     <div class="margin-bottom-60"></div>
-    </div>
+
     <!-- End Content -->
-    </div>
-    </div><!--/container-->
     <!--=== End Content Part ===-->
     <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
