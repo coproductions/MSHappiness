@@ -230,16 +230,16 @@
                     <!-- Accordion v1 -->
                     <div class="panel-group acc-v1" id="accordion-1">
                         <!--<div class="panel panel-default">-->
-                            <div class="panel-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One">
-                                    <div class="section group">
-                                        <div class="col-md-12" style="text-align:center">
-                                            <h3>Are you satisfied with the beverage options in your building?</h3>
-                                            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-                                        </div>
+                        <div class="panel-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One">
+                                <div class="section group">
+                                    <div class="col-md-12" style="text-align:center">
+                                        <h3>Are you satisfied with the beverage options in your building?</h3>
+                                        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
+                        </div>
                         <!--</div>-->
                         <div id="collapse-One" class="panel-collapse collapse in">
                             <div class="panel-body">
@@ -247,26 +247,27 @@
                                     <div class="col-md-12">
                                         <div class="panel-body">
                                             <!-- Pie Charts v1 -->
-                                            <div class="row pie-progress-charts margin-bottom-60">
-                                                <div class="inner-pchart col-md-4" ng-click="test('circle-1',$event)">
-                                                    <a id="positiveBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
-                                                        <i class="fa fa-smile-o"></i>
-                                                    </a>
-                                                    <div class="circle" id="circle-1">
-                                                    </div>
-                                                </div>
-                                                <div class="inner-pchart col-md-4" ng-click="test('circle-2',$event)">
-                                                    <a id="neutralBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
-                                                        <i class="fa fa-meh-o"></i>
-                                                    </a>
-                                                    <div class="circle" id="circle-2"></div>
-                                                </div>
-                                                <div class="inner-pchart col-md-4" ng-click="test('circle-3',$event)">
-                                                    <a id="negativeBtn1" role="button" onclick="hideButtonQ1()" class="btn btn-default">
-                                                        <i class="fa fa-frown-o"></i>
-                                                    </a>
-                                                    <div class="circle" id="circle-3"></div>
-                                                </div>
+                                            <div class="row pie-progress-charts margin-bottom-60" ng-click="answered('01','positive')">
+                                            <div class="inner-pchart col-md-4" >
+                                            <a id="positiveBtn" role="button"  class="btn btn-default" ng-hide ="questions['01'].answered">
+                                            <i class="fa fa-smile-o"></i>
+                                            </a>
+                                            <div class="circle" id="q01Positive">
+                                            </div>
+                                            </div>
+
+                                            <div class="inner-pchart col-md-4">
+                                            <a id="neutralBtn" role="button" class="btn btn-default" ng-click="test('circle-2',$event)" ng-hide ="questions['01'].answered">
+                                            <i class="fa fa-meh-o"></i>
+                                            </a>
+                                            <div class="circle" id="q01Neutral"></div>
+                                            </div>
+                                            <div class="inner-pchart col-md-4">
+                                            <a id="negativeBtn" role="button"  class="btn btn-default" ng-click="test('circle-3',$event)" ng-hide ="questions['01'].answered">
+                                            <i class="fa fa-frown-o"></i>
+                                            </a>
+                                            <div class="circle" id="q01Negative"></div>
+                                            </div>
                                             </div>
                                             <!-- End Pie Charts v1 -->
                                         </div>
@@ -487,13 +488,13 @@
 
 
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            App.init();
-            new WOW().init();
-            StyleSwitcher.initStyleSwitcher();
-            CirclesMaster.initCirclesMaster1();
-            CirclesMaster.initCirclesMaster2();
-        });
+        // jQuery(document).ready(function () {
+        //     App.init();
+        //     new WOW().init();
+        //     StyleSwitcher.initStyleSwitcher();
+        //     CirclesMaster.initCirclesMaster1();
+        //     CirclesMaster.initCirclesMaster2();
+        // });
 
         var $offset = 0;
         $offset = $(".navbar-fixed-top").height() + 12;
@@ -529,6 +530,5 @@
             <script src="assets/plugins/html5shiv.js"></script>
             <script src="assets/plugins/placeholder-IE-fixes.js"></script>
             <![endif]-->
-
 </body>
 </html>
