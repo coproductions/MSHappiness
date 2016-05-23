@@ -247,9 +247,11 @@
                                     <div class="col-md-12">
                                         <div class="panel-body">
                                             <!-- Pie Charts v1 -->
+
                                             <div class="row pie-progress-charts margin-bottom-60" ng-click="answered('01','positive')">
                                                 <div class="inner-pchart col-md-4" >
                                                     <a id="positiveBtn" role="button"  class="btn btn-default" ng-hide ="questions['01'].answered">
+
                                                         <i class="fa fa-smile-o"></i>
                                                     </a>
                                                     <div class="circle" id="q01Positive">
@@ -257,6 +259,7 @@
                                                 </div>
                                                 <div class="inner-pchart col-md-4">
                                                     <a id="neutralBtn" role="button" class="btn btn-default" ng-click="test('circle-2',$event)" ng-hide ="questions['01'].answered">
+
                                                         <i class="fa fa-meh-o"></i>
                                                     </a>
                                                     <div class="circle" id="q01Neutral"></div>
@@ -266,6 +269,7 @@
                                                         <i class="fa fa-frown-o"></i>
                                                     </a>
                                                     <div class="circle" id="q01Negative"></div>
+
 
                                                 </div>
                                             </div>
@@ -291,108 +295,88 @@
                             </div>
                             <div id="collapse-Two" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="panel-body">
-                                                <div class="col-md-4" style="text-align: center">
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-smile-o"></i>
-                                                    </a>
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-meh-o"></i>
-                                                    </a>
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-frown-o"></i>
-                                                    </a>
-                                                </div>
-                                                <!-- Pie Charts v1 -->
-                                                <div class="row pie-progress-charts margin-bottom-60">
-                                                    <div class="inner-pchart col-md-4" ng-click="test('circle-1',$event)">
-                                                        <div class="circle" id="circle-1"></div>
-                                                        <h3 class="circle-title">Heck ya!</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                    <div class="inner-pchart col-md-4" ng-click="test('circle-2',$event)">
-                                                        <div class="circle" id="circle-2"></div>
-                                                        <h3 class="circle-title">Whatevs</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                    <div class="inner-pchart col-md-4" ng-click="test($event)">
-                                                        <div class="circle" id="circle-3"></div>
-                                                        <h3 class="circle-title">Nope.</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Pie Charts v1 -->
+                                    <!-- Pie Charts v1 -->
+                                    <div class="row pie-progress-charts margin-bottom-60">
+                                        <div class="inner-pchart col-md-4">
+                                            <a id="positiveBtn2" role="button" onclick="hideButtonQ2()" class="btn btn-default" ng-click="test('circle-1',$event)">
+                                                <i class="fa fa-smile-o"></i>
+                                            </a>
+                                            <div class="circle" id="circle-1">
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel-group acc-v1" id="accordion-3">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-Four">
-                                    <div class="section group">
-                                        <div class="col-md-12" style="text-align:center">
-                                            <h3>Do you think your open office space improves your work day</h3>
-                                            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                        <div class="inner-pchart col-md-4">
+                                            <a id="neutralBtn2" role="button" onclick="hideButtonQ2()" class="btn btn-default" ng-click="test('circle-2',$event)">
+                                                <i class="fa fa-meh-o"></i>
+                                            </a>
+                                            <div class="circle" id="circle-2"></div>
+                                        </div>
+                                        <div class="inner-pchart col-md-4">
+                                            <a id="negativeBtn2" role="button" onclick="hideButtonQ2()" class="btn btn-default" ng-click="test('circle-3',$event)">
+                                                <i class="fa fa-frown-o"></i>
+                                            </a>
+                                            <div class="circle" id="circle-3"></div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div id="collapse-Four" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="panel-body">
-                                                <div class="col-md-4" style="text-align: center">
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-smile-o"></i>
-                                                    </a>
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-meh-o"></i>
-                                                    </a>
-                                                    <a role="button" class="btn btn-default">
-                                                        <i class="fa fa-frown-o"></i>
-                                                    </a>
-                                                </div>
-                                                <!-- Pie Charts v1 -->
-                                                <div class="row pie-progress-charts margin-bottom-60">
-                                                    <div class="inner-pchart col-md-4" ng-click="test('circle-1',$event)">
-                                                        <div class="circle" id="circle-1"></div>
-                                                        <h3 class="circle-title">Heck ya!</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                    <div class="inner-pchart col-md-4" ng-click="test('circle-2',$event)">
-                                                        <div class="circle" id="circle-2"></div>
-                                                        <h3 class="circle-title">Whatevs</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                    <div class="inner-pchart col-md-4" ng-click="test($event)">
-                                                        <div class="circle" id="circle-3"></div>
-                                                        <h3 class="circle-title">Nope.</h3>
-                                                        <p>comments</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Pie Charts v1 -->
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- End Pie Charts v1 -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Accordion v1 -->
-
-                <div class="margin-bottom-60"></div>
             </div>
-            <!-- End Content -->
         </div>
+
+        <div class="panel-group acc-v1" id="accordion-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-Four">
+                        <div class="section group">
+                            <div class="col-md-12" style="text-align:center">
+                                <h3>Do you think your open office space improves your work day</h3>
+                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="collapse-Four" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <!-- Pie Charts v1 -->
+                        <div class="row pie-progress-charts margin-bottom-60">
+                            <div class="inner-pchart col-md-4">
+                                <a id="positiveBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-1',$event)">
+                                    <i class="fa fa-smile-o"></i>
+                                </a>
+                                <div class="circle" id="circle-1">
+                                </div>
+                            </div>
+                            <div class="inner-pchart col-md-4">
+                                <a id="neutralBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-2',$event)">
+                                    <i class="fa fa-meh-o"></i>
+                                </a>
+                                <div class="circle" id="circle-2"></div>
+                            </div>
+                            <div class="inner-pchart col-md-4">
+                                <a id="negativeBtn3" role="button" onclick="hideButtonQ3()" class="btn btn-default" ng-click="test('circle-3',$event)">
+                                    <i class="fa fa-frown-o"></i>
+                                </a>
+                                <div class="circle" id="circle-3"></div>
+                            </div>
+                        </div>
+                        <!-- End Pie Charts v1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- End Accordion v1 -->
+
+    <div class="margin-bottom-60"></div>
+    </div>
+    <!-- End Content -->
+    </div>
     </div><!--/container-->
     <!--=== End Content Part ===-->
     <!--=== Footer Version 1 ===-->
@@ -530,12 +514,23 @@
             event.preventDefault();
         });
 
-        function hideButton() {
-            $("#positiveBtn").hide();
-            $("#neutralBtn").hide();
-            $("#negativeBtn").hide();
-        }
+        function hideButtonQ1() {
+            $("#positiveBtn1").hide();
+            $("#neutralBtn1").hide();
+            $("#negativeBtn1").hide();
+        };
 
+        function hideButtonQ2() {
+            $("#positiveBtn2").hide();
+            $("#neutralBtn2").hide();
+            $("#negativeBtn2").hide();
+        };
+
+        function hideButtonQ3() {
+            $("#positiveBtn3").hide();
+            $("#neutralBtn3").hide();
+            $("#negativeBtn3").hide();
+        };
     </script>
     <!--[if lt IE 9]>
             <script src="assets/plugins/respond.js"></script>
