@@ -112,6 +112,7 @@
 
         h3 {
             font-weight: bold;
+            text-align: center;
         }
 
         #nextbtn {
@@ -257,7 +258,6 @@
                                                     <div class="circle" id="q01Positive">
                                                     </div>
                                                 </div>
-
                                                 <div class="inner-pchart col-md-4">
                                                     <a id="neutralBtn" role="button" class="btn btn-default" ng-click="test('circle-2',$event)" ng-hide="questions['01'].answered">
                                                         <i class="fa fa-meh-o"></i>
@@ -272,9 +272,11 @@
                                                 </div>
                                             </div>
                                             <!-- End Pie Charts v1 -->
+                                            <h3 ng-show="questions['01'].answered">Thanks for your input!</h3>
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
                             </div>
                         </div>
                     </div>
@@ -492,12 +494,12 @@
     <script type="text/javascript">
         jQuery(document).ready(function () {
             $('#upArrow1').hide();
-        //     App.init();
-        //     new WOW().init();
-        //     StyleSwitcher.initStyleSwitcher();
-        //     CirclesMaster.initCirclesMaster1();
-        //     CirclesMaster.initCirclesMaster2();
-         });
+            //     App.init();
+            //     new WOW().init();
+            //     StyleSwitcher.initStyleSwitcher();
+            //     CirclesMaster.initCirclesMaster1();
+            //     CirclesMaster.initCirclesMaster2();
+        });
 
         var $offset = 0;
         $offset = $(".navbar-fixed-top").height() + 12;
