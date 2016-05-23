@@ -85,7 +85,7 @@ function createCircle(id, result){
        percentage: result,
        radius:     80,
        width:      8,
-       number:     87,
+       number:     result,
        text:       '%',
        colors:     ['#eee', '#72c02c'],
        duration:   2000
